@@ -22,24 +22,17 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Weight"
+                android:text="No. of days"
                 android:textSize="35sp" />
 
             <EditText
-                android:id="@+id/et_kg"
+                android:id="@+id/et_days"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:hint="kgs"
+                android:hint="0"
                 android:inputType="numberDecimal"
                 android:textSize="35sp" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
 
         </LinearLayout>
 
@@ -54,35 +47,100 @@
                 android:layout_centerInParent="true"
                 android:layout_weight="1"
 
-                android:text="Height"
+                android:text="No. of people"
                 android:textSize="35sp" />
 
             <EditText
-                android:id="@+id/et_feet"
+                android:id="@+id/et_num_of_people"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight=".5"
-                android:hint="feet"
+                android:layout_weight="1"
+                android:hint="0"
                 android:inputType="numberDecimal"
-                android:textSize="25sp" />
+                android:textSize="35sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Distance"
+                android:textSize="35sp" />
 
             <EditText
-                android:id="@+id/et_inches"
+                android:id="@+id/et_distance_kms"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight=".5"
-                android:hint="inches"
+                android:layout_weight="1"
+                android:hint="kms"
                 android:inputType="numberDecimal"
-                android:textSize="25sp" />
+                android:textSize="35sp" />
 
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Petrol per litre"
+                android:textSize="35sp" />
+
+            <EditText
+                android:id="@+id/et_petrol_per_ltr"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Rs."
+                android:inputType="numberDecimal"
+                android:textSize="35sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Car Average"
+                android:textSize="35sp" />
+
+            <EditText
+                android:id="@+id/et_car_avg"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="km/ltr"
+                android:inputType="numberDecimal"
+                android:textSize="35sp" />
 
         </LinearLayout>
 
         <Button
-            android:id="@+id/bt_convert"
+            android:id="@+id/bt_calculate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Convert" />
+            android:text="Calculate" />
 
         <TextView
             android:id="@+id/tv_res"
