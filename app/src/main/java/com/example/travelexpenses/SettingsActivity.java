@@ -42,24 +42,6 @@ public class SettingsActivity extends AppCompatActivity {
                     final FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
                     transaction.replace(R.id.settings, homeFragment);
                     transaction.commit();
-                } else if (id == R.id.chart) {
-                    Log.e("tale", "chart");
-                    item.setChecked(true);
-                    // Create new fragment and transaction
-                    Fragment homeFragment = new ChartFragment();
-                    final FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-                    transaction.replace(R.id.settings, homeFragment);
-                    transaction.commit();
-
-                } else if (id == R.id.about) {
-                    Log.e("tale", "about");
-
-                    // Create new fragment and transaction
-                    Fragment homeFragment = new AboutFragment();
-                    final FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-                    transaction.replace(R.id.settings, homeFragment);
-
-                    transaction.commit();
                 } else if (id == R.id.settings_button){
                     Log.e("tale", "settings");
 
