@@ -16,4 +16,9 @@
         android:id="@+id/about"
         android:title="About" />
 
+    <item
+        android:icon="@drawable/ic_baseline_settings_24"
+        android:id="@+id/settings_button"
+        android:title="Settings" />
+
 </menu>
