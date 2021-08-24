@@ -7,7 +7,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="16dp"
         android:gravity="center"
         android:orientation="vertical">
 
@@ -23,7 +23,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="No. of days"
-                android:textSize="35sp" />
+                android:textSize="25sp" />
 
             <EditText
                 android:id="@+id/et_days"
@@ -32,7 +32,7 @@
                 android:layout_weight="1"
                 android:hint="0"
                 android:inputType="numberDecimal"
-                android:textSize="35sp" />
+                android:textSize="25sp" />
 
         </LinearLayout>
 
@@ -48,7 +48,7 @@
                 android:layout_weight="1"
 
                 android:text="No. of people"
-                android:textSize="35sp" />
+                android:textSize="25sp" />
 
             <EditText
                 android:id="@+id/et_num_of_people"
@@ -57,7 +57,7 @@
                 android:layout_weight="1"
                 android:hint="0"
                 android:inputType="numberDecimal"
-                android:textSize="35sp" />
+                android:textSize="25sp" />
 
         </LinearLayout>
 
@@ -73,7 +73,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Distance"
-                android:textSize="35sp" />
+                android:textSize="25sp" />
 
             <EditText
                 android:id="@+id/et_distance_kms"
@@ -82,7 +82,7 @@
                 android:layout_weight="1"
                 android:hint="kms"
                 android:inputType="numberDecimal"
-                android:textSize="35sp" />
+                android:textSize="25sp" />
 
         </LinearLayout>
 
@@ -98,7 +98,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Petrol per litre"
-                android:textSize="35sp" />
+                android:textSize="25sp" />
 
             <EditText
                 android:id="@+id/et_petrol_per_ltr"
@@ -107,7 +107,7 @@
                 android:layout_weight="1"
                 android:hint="Rs."
                 android:inputType="numberDecimal"
-                android:textSize="35sp" />
+                android:textSize="25sp" />
 
         </LinearLayout>
 
@@ -123,7 +123,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Car Average"
-                android:textSize="35sp" />
+                android:textSize="25sp" />
 
             <EditText
                 android:id="@+id/et_car_avg"
@@ -132,7 +132,7 @@
                 android:layout_weight="1"
                 android:hint="km/ltr"
                 android:inputType="numberDecimal"
-                android:textSize="35sp" />
+                android:textSize="25sp" />
 
         </LinearLayout>
 
@@ -148,7 +148,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:textColor="@android:color/holo_green_light"
-            android:textSize="31dp" />
+            android:textSize="21dp" />
     </LinearLayout>
 
 </RelativeLayout>
