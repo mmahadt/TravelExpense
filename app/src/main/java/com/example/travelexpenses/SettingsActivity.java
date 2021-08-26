@@ -9,6 +9,8 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.preference.EditTextPreference;
+import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -68,6 +70,24 @@ public class SettingsActivity extends AppCompatActivity {
         @Override
         public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
             setPreferencesFromResource(R.xml.root_preferences, rootKey);
+
+//            EditTextPreference edit_Pref = (EditTextPreference)
+//                    getPreferenceScreen().findPreference("geofence_range");
+//            edit_Pref.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+//
+//                @Override
+//                public boolean onPreferenceChange(Preference preference, Object newValue) {
+//                    // put validation here..
+//                    if(true){
+//                        return true;
+//                    }else{
+//                        return false;
+//                    }
+//                }
+//            });
         }
+
+
+
     }
 }

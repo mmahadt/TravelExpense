@@ -1,7 +1,9 @@
 package com.example.travelexpenses;
 
+import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.text.InputType;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +16,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.preference.PreferenceManager;
+import com.takisoft.preferencex.PreferenceFragmentCompat;
+
 
 public class HomeFragment extends Fragment {
     @Nullable
@@ -37,7 +41,11 @@ public class HomeFragment extends Fragment {
 
         final EditText et_petrol_per_ltr = view.findViewById(R.id.et_petrol_per_ltr);
 
-        final TextView tv_res = view.findViewById(R.id.tv_res);
+        final TextView tv_net_res = view.findViewById(R.id.tv_net_cost_per_person_val);
+
+        final TextView tv_per_person_cost = view.findViewById(R.id.tv_cost_per_person_val);
+
+        final TextView tv_wear_per_person = view.findViewById(R.id.tv_wear_per_person_val);
 
         final Button bt_calculate = view.findViewById(R.id.bt_calculate);
 
@@ -60,21 +68,21 @@ public class HomeFragment extends Fragment {
 //                } else if (inches.length() == 0 || "".equals(inches)) {
 //                    Toast.makeText(getActivity(), "Please enter some value in inches field.", Toast.LENGTH_SHORT).show();
 //                } else {
-
+                
                 double carAverage = Double.parseDouble(carAvg);
                 double numOfDays = Double.parseDouble(days);
                 double dist = Double.parseDouble(distance);
                 double numOfPeople = Double.parseDouble(noOfPeople);
                 double petrolPerLtr = Double.parseDouble(petrolPerLitre);
 
-                String tire_usage_life = sharedPreferences.getString("tire_usage_life", "");
-                String cost_tires_set = sharedPreferences.getString("cost_tires_set", "");
-                String mobil_oil_usage_life = sharedPreferences.getString("mobil_oil_usage_life", "");
-                String mobil_oil_cost = sharedPreferences.getString("mobil_oil_cost", "");
-                String battery_usage_life = sharedPreferences.getString("battery_usage_life", "");
-                String battery_cost = sharedPreferences.getString("battery_cost", "");
-                String suspension_usage_life = sharedPreferences.getString("suspension_usage_life", "");
-                String suspension_cost = sharedPreferences.getString("suspension_cost", "");
+                String tire_usage_life = sharedPreferences.getString("tire_usage_life", "70000");
+                String cost_tires_set = sharedPreferences.getString("cost_tires_set", "25000");
+                String mobil_oil_usage_life = sharedPreferences.getString("mobil_oil_usage_life", "3000");
+                String mobil_oil_cost = sharedPreferences.getString("mobil_oil_cost", "2000");
+                String battery_usage_life = sharedPreferences.getString("battery_usage_life", "3");
+                String battery_cost = sharedPreferences.getString("battery_cost", "4000");
+                String suspension_usage_life = sharedPreferences.getString("suspension_usage_life", "3");
+                String suspension_cost = sharedPreferences.getString("suspension_cost", "25000");
 
                 double tire_usage_life_val = Double.parseDouble(tire_usage_life);
                 double cost_tires_set_val = Double.parseDouble(cost_tires_set);
@@ -99,25 +107,12 @@ public class HomeFragment extends Fragment {
                 double wearPerPerson = (tireWear + batteryWear + suspensionWear + mobileOilUse) / numOfPeople;
 
                 double result = costPerPerson + wearPerPerson;
-                String result_string = String.format("%.1f", result);
+                double finalValue = Math.ceil( result );
+                String result_string = String.format("%.0f", finalValue);
+                tv_net_res.setText(result_string);
+                tv_per_person_cost.setText(String.format("%.1f", costPerPerson ));
+                tv_wear_per_person.setText(String.format("%.1f", wearPerPerson ));
 
-                tv_res.setText("Net cost per person = Rs. " + result_string );
-//                double meters = (feet * 0.3048) + (inch * 0.0254);
-//                double kg = Double.parseDouble(kgs);
-//                double bmi = kg / (meters * meters);
-//                String bmi_string = String.format("%.1f", bmi);
-//
-//                if (bmi < 18.5) {
-//                    tv_res.setText("BMI = " + bmi_string + " Underweight");
-//                } else if (bmi < 24.9) {
-//                    tv_res.setText("BMI = " + bmi_string + " Normal");
-//                } else if (bmi < 29.9) {
-//                    tv_res.setText("BMI = " + bmi_string + " Overweight");
-//                } else {
-//                    tv_res.setText("BMI = " + bmi_string + " Obese");
-//                }
-
-//                }
             }
         });
     }

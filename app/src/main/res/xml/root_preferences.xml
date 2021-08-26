@@ -1,57 +1,72 @@
-<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <PreferenceCategory app:title="Tires">
+    <PreferenceCategory app:title="Tires"
+        app:icon="@drawable/ic_baseline_card_travel_24">
 
         <EditTextPreference
             app:key="tire_usage_life"
             app:title="Usage life (km)"
-            app:useSimpleSummaryProvider="true" />
+            app:useSimpleSummaryProvider="true"
+            app:defaultValue="70000"
+            />
 
         <EditTextPreference
             app:key="cost_tires_set"
             app:title="Cost (4 tire set)"
+            app:defaultValue="75000"
             app:useSimpleSummaryProvider="true" />
 
     </PreferenceCategory>
 
-    <PreferenceCategory app:title="Mobil Oil">
+    <PreferenceCategory app:title="Mobil Oil"
+        app:icon="@drawable/ic_baseline_grain_24"
+        >
 
         <EditTextPreference
             app:key="mobil_oil_usage_life"
             app:title="Usage life (km)"
+            app:defaultValue="3000"
             app:useSimpleSummaryProvider="true" />
 
         <EditTextPreference
             app:key="mobil_oil_cost"
             app:title="Cost"
+            app:defaultValue="4000"
             app:useSimpleSummaryProvider="true" />
 
     </PreferenceCategory>
 
-    <PreferenceCategory app:title="Battery">
+    <PreferenceCategory app:title="Battery"
+        app:icon="@drawable/ic_round_battery_charging_full_24">
 
         <EditTextPreference
             app:key="battery_usage_life"
+            android:defaultValue="3"
             app:title="Usage life (yrs)"
             app:useSimpleSummaryProvider="true" />
 
         <EditTextPreference
             app:key="battery_cost"
             app:title="Cost"
+            app:defaultValue="6000"
             app:useSimpleSummaryProvider="true" />
 
     </PreferenceCategory>
 
-    <PreferenceCategory app:title="Suspension">
+    <PreferenceCategory app:title="Suspension"
+        app:icon="@drawable/ic_round_dehaze_24">
 
         <EditTextPreference
             app:key="suspension_usage_life"
             app:title="Usage life (yrs)"
+            app:defaultValue="3"
             app:useSimpleSummaryProvider="true" />
 
         <EditTextPreference
             app:key="suspension_cost"
             app:title="Cost"
+            app:defaultValue="75000"
             app:useSimpleSummaryProvider="true" />
 
     </PreferenceCategory>
